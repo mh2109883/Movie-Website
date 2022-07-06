@@ -1,0 +1,234 @@
+
+/*:root {
+    --dark-body: url(https://eskipaper.com/images/crescent-moon-10.jpg);
+    --dark-main: #141529;
+    --dark-second: #f998d6;
+    --dark-hover: #323048;
+    --dark-text: #f89ae7;
+
+    --light-body: url(https://img.freepik.com/free-photo/mustard-field-with-beautiful-snow-covered-mountains-landscape-kashmir-state-india_1232-4327.jpg?w=2000);
+    --light-main: #f7e5e5;
+    --light-second: #fa95d5;
+    --light-hover: #edf0f5;
+    --light-text: #760d49;
+
+    --blue: #0004ff;
+    --white: #fff;
+
+   
+
+    --font-family:  system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.dark{
+    --bg-body: var(--dark-body);
+    --bg-main: var(--dark-main);
+    --bg-second: var(--dark-second);
+    --color-hover: var(--dark-hover);
+    --color-txt: var(--dark-text);
+    --shadow: rgb(255, 255, 255,0.3) 2px 5px 7px 5px;
+}
+
+.lightmode{
+    --bg-body: var(--light-body);
+    --bg-main: var(--light-main);
+    --bg-second: var(--light-second);
+    --color-hover: var(--light-hover);
+    --color-txt: var(--light-text);
+    --shadow: rgba(100, 100, 111, 1) 0px 7px 29px 0px;
+}*/
+
+:root{
+    --dark-navbar:gray;
+    --light-navbar:blue;
+
+}
+
+.darkmode{
+    --bg-navbar:var(--dark-navbar);
+}
+
+.lightmode{
+    --bg-navbar:var(--light-navbar);
+}
+
+
+* {
+ margin: 0;
+ font-family: cursive;
+
+}
+body{
+    display: grid;
+    overflow: scroll;
+    background-color: black;
+
+}
+  
+.navbar {
+    width: 100%;
+    height: 50px;
+    background-color: rgb(93, 8, 8); /*need to be a part of the dark and light mode*/
+    position: sticky;
+    top: 0;
+}
+  
+.navbar-container {
+    display: flex;
+    align-items: center;
+    padding: 0 50px; /* top-bottom 0 px*/
+    height: 100%;
+    color: rgb(255, 255, 255);
+    font-family: "Sen", sans-serif;
+}
+  
+.logo-container {
+    flex: 2;
+}
+  
+.logo {
+    font-size: 30px;
+    color: #cb0202;
+    display: flex;
+
+}
+  
+.menu-container {
+    flex: 6;
+}
+  
+.menu-list {
+    display: flex;
+    list-style: none;
+}
+  
+.menu-list-item {
+    margin-right: 30px;
+}
+  
+.menu-list-item.active {
+    font-weight: bold;
+}
+.profile-container {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+  
+.profile-text-container {
+    margin: 0 20px;
+}
+  
+.profile-picture {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+  
+.toggle {
+    width: 40px;
+    height: 20px;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+  
+.toggle-icon {
+    color: goldenrod;
+}
+  
+.toggle-ball {
+    width: 18px;
+    height: 18px;
+    background-color: black;
+    position: absolute;
+    right: 1px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 1s ease all;
+}
+
+.movie-list-container {
+    padding: 0 20px;
+  }
+  
+  .movie-list-wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .movie-list {
+    display: flex;
+    align-items: center;
+    height: 300px;
+    transform: translateX(0);
+    transition: all 1s ease-in-out;
+  }
+  
+  .movie-list-item {
+    margin-right: 30px;
+    position: relative;
+  }
+  
+  .movie-list-item:hover .movie-list-item-img {
+    transform: scale(1.2);
+    margin: 0 30px;
+    opacity: 0.5;
+  }
+  
+  .movie-list-item:hover .movie-list-item-title,
+  .movie-list-item:hover .movie-list-item-desc,
+  .movie-list-item:hover .movie-list-item-button {
+    opacity: 1;
+  }
+  
+  .movie-list-item-img {
+    transition: all 1s ease-in-out;
+    width: 200px;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+  
+  .movie-list-item-title {
+    background-color: #333;
+    padding: 0 10px;
+    font-size: 32px;
+    font-weight: bold;
+    position: absolute;
+    top: 10%;
+    left: 50px;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+  }
+  
+  .movie-list-item-desc {
+    padding: 10px;
+    font-size: 14px;
+    position: absolute;
+    top: 30%;
+    left: 50px;
+    width: 230px;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+  }
+  
+  .movie-list-item-button {
+    padding: 10px;
+    background-color: #4dbf00;
+    color: white;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    left: 50px;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+  }
